@@ -33,11 +33,11 @@ body {
 }
 
 .container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
 }
 
 .purple__container {
@@ -52,13 +52,12 @@ body {
 .grey__container {
     position: absolute;
     width: 50%;
-    height: 50vh;
+    height: 60vh;
     z-index: -1;
     right: 0;
     bottom: 0;
     border-radius: 1000px 0px 0px 0px;
-    background-color: red;
-    /* background-color: var(--grey); */
+    background-color: var(--grey);
 }
 
 .mobile__seciton {
@@ -255,8 +254,8 @@ body {
 }
 
 .texts__section {
-    margin-bottom: 80px;
     text-align: center;
+    margin: 30px 0 80px 0;
 }
 
 .texts__section__title {
@@ -266,14 +265,60 @@ body {
 }
 
 .texts__section__description {
+    position: relative;
     line-height: 1.7rem;
     width: 80%;
     margin: 0 auto;
     color: var(--Dark-Grayish-Violet);
 }
 
-@media screen and (min-width: 700px) {
-    body {
+@media screen and (min-width: 800px) {
+
+    .container {
+        display: flex;
         flex-direction: row;
+        justify-content: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .mobile__seciton {
+        width: 250px;
+        height: 510px;
+        margin: 0 auto;
+        margin-top: 80px;
+        padding: 12px;
+        background-color: var(--White);
+        border-radius: 32px;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    }
+
+    .texts__section {
+        width: 50%;
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 5rem;
+    }
+    
+    
+    .texts__section__description {
+        position: relative;
+        line-height: 1.7rem;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        color: var(--Dark-Grayish-Violet);
+    }
+
+    .purple__container {
+        width: 30%;
+        height: 80vh;
+        border-radius: 0px 0px 1000px 1000px;
+    }
+    
+    .grey__container {
+        width: 30%;
+        height: 80vh;
+        border-radius: 1000px 0px 0px 0px;
     }
 }
